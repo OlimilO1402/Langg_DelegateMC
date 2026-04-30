@@ -18,8 +18,13 @@ End Type
 
 'das ist illegal, hier muß natürlich ein VirtualAlloc und VirtualProtect her!
 'die kurze ASM-Funktion nur 8-Bytes insgesamt passt komplett in einen Currency
-Private Const C_DelegateASM As Currency = -368956918007638.6215@
-Private mDelegateASM As Currency
+#If win64 Then
+    Private Const C_DelegateASM As Long = &HCC0861FF
+    Private mDelegateASM As Long
+#Else
+    Private Const C_DelegateASM As Currency = -368956918007638.6215@
+    Private mDelegateASM As Currency
+#End If
 
 Public Function New_DelegateFunction(this As TDelegateFunction, ByVal pFnc As LongPtr) As IUnknown
     Dim pAR As LongPtr
@@ -49,7 +54,7 @@ Public Function New_DelegateFunction(this As TDelegateFunction, ByVal pFnc As Lo
         .pFunction = pFnc
         .pVTable = mpVTableOK
     End With
-    Call RtlMoveMemory(New_DelegateFunction, VarPtr(this), 4)
+    Call RtlMoveMemory(New_DelegateFunction, VarPtr(this), MPtr.SizeOf_LongPtr)
     
 End Function
 

@@ -108,6 +108,11 @@ Private Sub Form_Resize()
 
 End Sub
 
+Sub test()
+    Dim f As MathFunction
+    Dim res As Double: res = f.von(123)
+    
+End Sub
 Private Sub CmbMathFunctions_Click()
     Dim e As EMathFuncs: e = CmbMathFunctions.ListIndex
     LblMathFormula.Caption = MSystem.EMathFuncs_ToMathFormula(e)

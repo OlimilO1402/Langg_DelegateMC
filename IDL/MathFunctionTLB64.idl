@@ -1,0 +1,25 @@
+// MathFunctionTLB64.idl
+// IDL definition for MathFunction type library
+
+import "oaidl.idl";
+import "ocidl.idl";
+
+[
+    uuid(7A1A1C52-9C4E-4F0E-8E3A-1C4A9F0B1234),
+    version(1.0)
+]
+library DelegateMathFunctionTLB64
+{
+    importlib("stdole2.tlb");
+
+    // Interface definition
+    [
+        object,
+        uuid(8B2B2D63-AB5F-4E1C-9D4F-2D5B1C8E5678),
+        oleautomation
+    ]
+    interface MathFunction : IUnknown
+    {
+        [id(1)] DOUBLE von([in] DOUBLE x);
+    };
+};
