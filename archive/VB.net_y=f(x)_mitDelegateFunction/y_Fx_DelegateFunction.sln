@@ -1,0 +1,20 @@
+
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Basic Express 2005
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "y_Fx_DelegateFunction", "y_Fx_DelegateFunction.vbproj", "{4055BFB6-A358-49D6-9DAC-1424CF91772B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4055BFB6-A358-49D6-9DAC-1424CF91772B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4055BFB6-A358-49D6-9DAC-1424CF91772B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4055BFB6-A358-49D6-9DAC-1424CF91772B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4055BFB6-A358-49D6-9DAC-1424CF91772B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,8 +1,11 @@
 Attribute VB_Name = "MIUnknown"
 Option Explicit
 'wird von QueryInterface zurückgegeben, falls das Objekt kein Interface hat:
+Const asm_nop As Byte = &H90
+Const asm_nop2 As Integer = &H9066
+Public Const S_OK          As Long = &H0
 Public Const E_NOINTERFACE As Long = &H80004002
-
+Public Const E_POINTER     As Long = &H80004003
 'dies ist der typische VTable der Schnittstelle IUnknown
 Public Type TIUnknownVTable
     PQueryInterface As LongPtr

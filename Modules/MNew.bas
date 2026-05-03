@@ -1,7 +1,7 @@
 Attribute VB_Name = "MNew"
 Option Explicit
 
-Public Function MathFunction(aDF As TDelegateFunction, ByVal pFncAddr As LongPtr) As MathFunction 'ICallDoubleReturnDouble 'ICallLongReturnLong
+Public Function MathFunction(aDF As TDelegateFunction, ByVal pFncAddr As LongPtr) As MathFunction 'ICallDoubleReturnDouble
     Set MathFunction = New_DelegateFunction(aDF, pFncAddr)
 End Function
 
