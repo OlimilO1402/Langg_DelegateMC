@@ -71,6 +71,12 @@ Private mCExp As Variant ' Konstantenparameter für eine Expon-Funktion
 Private mCDpH As Variant ' Konstantenparameter für eine ged. Schwingung
 Private mView As New MathFunctionView
 
+Private Sub Command1_Click()
+'    Dim aGuid As Guid: Set aGuid = MNew.GuidCo
+'    Dim s As String: s = aGuid.ToStr
+'    s = InputBox("Guid:", "GUID", UCase(s))
+End Sub
+
 Private Sub Form_Load()
     
     ' Alle Namen der Enumkonstanten in die ComboBox eintragen
@@ -93,13 +99,13 @@ End Sub
 Private Sub Form_Resize()
     
     Dim br As Single: br = 8 '* Screen.TwipsPerPixelX
-    Dim L As Single: L = br
+    Dim l As Single: l = br
     Dim t As Single: t = Picture1.Top
-    Dim W As Single: W = Me.ScaleWidth - L - br
+    Dim W As Single: W = Me.ScaleWidth - l - br
     Dim H As Single: H = Me.ScaleHeight - t - br
     
     If W > 0 And H > 0 Then
-        Picture1.Move L, t, W, H ' br, PictureBox1.Top, .ScaleWidth - PictureBox1.Left - br, .ScaleHeight - PictureBox1.Top - br
+        Picture1.Move l, t, W, H ' br, PictureBox1.Top, .ScaleWidth - PictureBox1.Left - br, .ScaleHeight - PictureBox1.Top - br
     End If
     
     'Set mView.Size = PictureBox1
