@@ -131,7 +131,8 @@ Try: On Error GoTo Catch
     
             If x = xMin Then oldPt = newPt        ' noch bevor gezeichnet wird!
             'gr.DrawLine(Pens.Blue, oldPt, newPt)
-            mCanvas.Line (oldPt.x, oldPt.y)-(newPt.x, newPt.y), vbBlue
+            'y umdrehen, weil y sonst positiv nach unten geht, es soll aber positiv nach oben gehen
+            mCanvas.Line (oldPt.x, -oldPt.y)-(newPt.x, -newPt.y), vbBlue
             
             oldPt = newPt
         End If

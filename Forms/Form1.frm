@@ -19,6 +19,14 @@ Begin VB.Form FMain
    ScaleMode       =   3  'Pixel
    ScaleWidth      =   625
    StartUpPosition =   3  'Windows-Standard
+   Begin VB.CommandButton Command1 
+      Caption         =   "Command1"
+      Height          =   375
+      Left            =   5280
+      TabIndex        =   3
+      Top             =   0
+      Width           =   1575
+   End
    Begin VB.PictureBox Picture1 
       BeginProperty Font 
          Name            =   "MS Sans Serif"
@@ -75,6 +83,11 @@ Private Sub Command1_Click()
 '    Dim aGuid As Guid: Set aGuid = MNew.GuidCo
 '    Dim s As String: s = aGuid.ToStr
 '    s = InputBox("Guid:", "GUID", UCase(s))
+    Dim s As String: s = InputBox("Value = ", "Value?")
+    If StrPtr(s) = 0 Then Exit Sub 'Cancel
+    Dim x As Double: x = Val(s)
+    Dim y As Double: y = f.von(x)
+    MsgBox "Ergebnis: y = f(x) = " & y
 End Sub
 
 Private Sub Form_Load()
