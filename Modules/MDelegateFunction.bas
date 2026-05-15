@@ -28,7 +28,7 @@ End Type              'Sum: 16
 Private m_VMem As VirtualMemory
 Private m_pVMemDelegateASM As LongPtr
 
-#If win64 Then
+#If Win64 Then
     Private Const C_DelegateASM As Long = &HCC0861FF
     Private Const SizeOf_ASM As Long = 4
     'Private mDelegateASM As Long
@@ -91,10 +91,10 @@ End Function
 
 Private Function QueryInterfaceOK(this As TDelegateFunction, riid As LongPtr, pvObj As LongPtr) As Long 'Ptr
     pvObj = VarPtr(this)
-    Dim sGuid(0 To 76) As Byte
-    Dim hr As Long
-    hr = StringFromGUID2(riid, VarPtr(sGuid(0)), 76)
-    Debug.Print sGuid '{803D4140-C4E3-4699-8847-F8C07AD202CA}
+    'Dim sGuid(0 To 76) As Byte
+    'Dim hr As Long
+    'hr = StringFromGUID2(riid, VarPtr(sGuid(0)), 76)
+    'Debug.Print sGuid '{803D4140-C4E3-4699-8847-F8C07AD202CA}
     'this.pVTable = mpVTableFail
 End Function
 Private Function QueryInterfaceFail(this As TIUnknownVTable, riid As LongPtr, pvObj As LongPtr) As Long 'Ptr
@@ -107,11 +107,11 @@ End Function
 'End Function
 Private Function AddRef(this As LongPtr) As LongPtr
     'hier wird nichts gemacht
-    Debug.Print "AddRef"
+    'Debug.Print "AddRef"
 End Function
 Private Function Release(this As LongPtr) As LongPtr
     'hier wird nichts gemacht
-    Debug.Print "Release"
+    'Debug.Print "Release"
 End Function
 
 
